@@ -405,7 +405,6 @@ font-family: var(--inter);
 
 .unlockimg {
   width: 442px;
-  max-width: 45%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -471,13 +470,14 @@ font-family: var(--inter);
 
 .achievements {
     width: 100%;
-    height: 288px;
-    justify-content: space-between;
+    height: auto;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     padding: 64px 144px 64px 144px;
     background-color: var(--silver);
-    gap: 48px;
+    /* gap: 48px; */
 }
 
 .sectionheading {
@@ -746,8 +746,8 @@ margin-bottom: 32px;
 }
 
 .tesla {
-width: 326px;
-height: 326px;
+width: 362px;
+height: auto;
 border-radius: 8px;
 }
 
@@ -758,8 +758,7 @@ border-radius: 8px;
 
 .customer-frame {
     width: 748px;
-    height: 324px;
-    /* gap: 32px; */
+    height: auto;
     padding: 33px 144px 33px 78px;
 }
 
@@ -844,16 +843,6 @@ margin-bottom: 32px;
     text-decoration: underline var(--primary-color);
 }
 
-.cstmrframe img {
-    width: 24px;
-    height: 24px;
-    gap: 0px 8px;
-}
-
-.cstmrframe img img{
-    width: 100%;
-    height: auto;
-}
 
 .updates {
     width: 100%;
@@ -896,6 +885,8 @@ margin-bottom: 32px;
     height: 366px;
     display: flex;
     justify-content: space-between;
+    text-align: center;
+    align-items: center;
     padding-right: 144px;
     padding-left: 144px;
     margin-top: 16px;
@@ -953,6 +944,11 @@ font-weight: 600;
 
 .update1h4:hover {
     text-decoration: underline var(--primary-color);
+}
+
+.arw {
+    color: var(--primary-color);
+    font-size: 18px;
 }
 
 
@@ -1077,7 +1073,7 @@ margin: 0;
     gap: 8px;
 }
 
-.updateframe2 img{
+/* .updateframe2 img{
     width: 24px;
     height: 24px;
     max-width: 24px;
@@ -1088,7 +1084,7 @@ margin: 0;
 .updateframe2 img img{
     width: 100%;
     height: auto;
-}
+} */
 
 .upperfooter {
     margin-top: 9%;
