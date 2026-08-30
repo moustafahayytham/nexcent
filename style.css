@@ -1012,18 +1012,22 @@ margin: 0;
 }
 
 .updateframe2 {
+    width: 100%;
+    height: 40px;
     padding: 8px;
-    gap: 8px;              
+    margin-top: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 16px;
+    gap: 8px;
 }
 
 .updateframe2 img{
     width: 24px;
     height: 24px;
-    gap: 0px 8px;
+    max-width: 24px;
+    object-fit: contain;
+    display: block;
 }
 
 .updateframe2 img img{
@@ -1173,6 +1177,13 @@ padding-left: 12px;
 
 
 @media (max-width: 768px) {
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
 
     /* NAVBAR */
     nav {
@@ -1450,10 +1461,14 @@ padding-left: 12px;
     }
 
     .customerrow {
-        width: 100%;
-        height: auto;
-        flex-wrap: wrap;
-        gap: 20px;
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    padding-left: 50px;
+    padding-right: 50px;
     }
 
 
@@ -1785,49 +1800,109 @@ padding-left: 12px;
     }
 
 
-    /* CUSTOMER */
+    /* ==========================================
+   CUSTOMER - TABLET / MOBILE
+   ========================================== */
+
+@media (max-width: 768px) {
+
     .customer {
-        height: auto;
+        width: 100%;
+        min-height: auto;
+        padding: 40px 25px;
+        display: flex;
         flex-direction: column;
-        padding: 40px 20px;
+        align-items: center;
         gap: 30px;
     }
 
+
+
     .tesla {
-        width: 260px;
-        height: 260px;
+        width: 280px;
+        height: 280px;
     }
+
+
+    /* CONTENT */
 
     .customer-frame {
         width: 100%;
-        height: auto;
+        max-width: 748px;
+        display: flex;
+        flex-direction: column;
     }
 
     .customercontent {
         width: 100%;
         height: auto;
         font-size: 14px;
-        line-height: 1.6;
+        margin-bottom: 18px;
     }
+
+
+    /* NAME */
 
     .customer-frame2 {
         width: 100%;
         height: auto;
-        margin-top: 20px;
+
+        margin-bottom: 25px;
     }
 
-    .customer-frame2 h4,
-    .customer-frame2 p {
-        width: 100%;
-        height: auto;
+    .customer-frame2 h4 {
+        font-size: 18px;
     }
+
+    .customer-frame2 p {
+        font-size: 14px;
+    }
+
+
+    /* LOGOS */
 
     .customerrow {
         width: 100%;
         height: auto;
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
         flex-wrap: wrap;
-        gap: 20px;
     }
+
+    .cstmrimg {
+        width: 48px;
+        height: 48px;
+    }
+
+    .cstmrimg img {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+    }
+
+
+    .cstmrframe3 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .cstmrframe3 h4 {
+        font-size: 16px;
+        width: auto;
+    }
+
+    .cstmrframe img {
+        width: 24px;
+        height: 24px;
+    }
+}
 
 
     /* UPDATES */
@@ -1915,3 +1990,5 @@ padding-left: 12px;
         width: 100%;
     }
 }
+
+
